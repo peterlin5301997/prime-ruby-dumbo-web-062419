@@ -1,17 +1,18 @@
 # Add  code here!
-def prime?(number)
-  if number == 2 || number == 3
-    return true
-  elsif number <= 1
+def prime?(num)
+  prime = 1
+  range = (2..num).to_a
+  for i in range do
+    if num % i == 0
+      prime = 0
+  end
+  if num == 1
     return false
   else
-    range = (2..number).to_a
-    for i in range
-      if number % i != 0
-        return true
-      else
-        return false
-      end
+    if prime == 1
+      return true
+    else
+      return false
     end
   end
 end
