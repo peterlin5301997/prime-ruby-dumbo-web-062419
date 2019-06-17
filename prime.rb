@@ -9,6 +9,8 @@ def prime?(number)
     for i in range
       if number % i == 0
         return false
+      else
+        return true
       end
     end
   end
